@@ -11,40 +11,46 @@ Tabela, Linha e Coluna (o método main() pode).
 ```
 public class Tabela {
  private List<Linha> linhas = new ArrayList<Linha>();
- public void adicionar(Linha l) {
- linhas.add(l);
- }
+ 	
+	public void adicionar(Linha l) {
+ 		linhas.add(l);
+ 	}
 }
 
 
 public class Linha {
  private List<Celula> celulas = new ArrayList<Celula>();
- public void imprimir() {
- // Imprime a borda lateral.
- System.out.println(" |");
+ 	
+	public void imprimir() {
+ 		// Imprime a borda lateral.
+ 		System.out.println(" |");
 
- // Imprime a linha.
- int tamanho = (celulas.size() * 17) + 5;
- char[] linha = new char[tamanho];
- for (int i = 0; i < tamanho; i++) linha[i] = '-';
- System.out.println(" " + new String(linha));
- }
- public void adicionar(Celula c) {
- celulas.add(c);
- }
+ 		// Imprime a linha.
+ 		int tamanho = (celulas.size() * 17) + 5;
+ 		char[] linha = new char[tamanho];
+ 		for (int i = 0; i < tamanho; i++) linha[i] = '-';
+ 		System.out.println(" " + new String(linha));
+ 	}
+
+ 	public void adicionar(Celula c) {
+ 		celulas.add(c);
+ 	}
 }
 
 public class Celula {
- private String conteudo;
- public Celula(String conteudo) {
- this.conteudo = conteudo;
- }
- public void imprimir() {
- // Limita o conteúdo a exatamente 15 caracteres.
- conteudo = conteudo + " ";
- conteudo = conteudo.substring(0, 15);
- // Imprime na mesma linha e com borda lateral.
- System.out.print(" | " + conteudo);
- }
+ 	private String conteudo;
+ 
+ 	public Celula(String conteudo) {
+ 		this.conteudo = conteudo;
+ 	}
+
+ 	public void imprimir() {
+
+ 		// Limita o conteúdo a exatamente 15 caracteres.
+ 		conteudo = conteudo + " ";
+ 		conteudo = conteudo.substring(0, 15);
+ 		// Imprime na mesma linha e com borda lateral.
+ 		System.out.print(" | " + conteudo);
+ 	}
 }
 ```
