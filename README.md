@@ -1,4 +1,6 @@
-# 3.2.Exercício:
+# 3. Composite
+
+### 3.2.Exercício:
 ```
 As classes abaixo implementam uma tabela que contém linhas que por sua vez contêm células com
 conteúdo texto de até 15 caracteres. Altere-as tal que elas fiquem no padrão Composite para que você
